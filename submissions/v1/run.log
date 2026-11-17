@@ -1,0 +1,26 @@
+train sentences 8505, test sentences 1519
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/172 [00:00<?, ?it/s]Loading weights: 100%|██████████| 172/172 [00:00<00:00, 14058.66it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie shared.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+epoch 1/20: mean training loss 1.1423
+epoch 2/20: mean training loss 0.1708
+epoch 3/20: mean training loss 0.1112
+epoch 4/20: mean training loss 0.0862
+epoch 5/20: mean training loss 0.0701
+epoch 6/20: mean training loss 0.0586
+epoch 7/20: mean training loss 0.0494
+epoch 8/20: mean training loss 0.0423
+epoch 9/20: mean training loss 0.0362
+epoch 10/20: mean training loss 0.0299
+epoch 11/20: mean training loss 0.0249
+epoch 12/20: mean training loss 0.0208
+epoch 13/20: mean training loss 0.0172
+epoch 14/20: mean training loss 0.0141
+epoch 15/20: mean training loss 0.0115
+epoch 16/20: mean training loss 0.0095
+epoch 17/20: mean training loss 0.0076
+epoch 18/20: mean training loss 0.0062
+epoch 19/20: mean training loss 0.0049
+epoch 20/20: mean training loss 0.0042
+wrote 1519 rows to working/submission.csv
+wall time: 2590s

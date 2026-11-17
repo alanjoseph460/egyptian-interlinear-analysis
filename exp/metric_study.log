@@ -1,0 +1,80 @@
+self checks ok: levenshtein == dp on 3000 pairs; gloss anchors 0.5 and 0.857 under set and multiset
+holdout (19th century BCE or later) 1809 sentences, lookup source 6696
+holdout centuries [('18th century BCE', 1490), ('19th century BCE', 310), ('16th century BCE', 9)]
+holdout words 12649, unseen spelling 0.460 (test page 0.335), unseen lemma 0.146 (test page 0.097), default =k;=k;PRON;-2sg.m
+
+== baselines (published test anchors in brackets) ==
+constant most frequent analysis                            s 0.1040  T 0.024  L 0.052  P 0.217  G 0.202 [0.0903: 0.021 0.029 0.200 0.179]
+word lookup                                                s 0.3151  T 0.107  L 0.444  P 0.450  G 0.468 [0.4238: 0.191 0.579 0.574 0.583]
+   scoring 1809 sentences took 1.08 s
+perfect (asserted 1.0 on every row)                        s 1.0000  T 1.000  L 1.000  P 1.000  G 1.000 
+
+== oracles ==
+perfect T, other layers empty                              s 0.4000  T 1.000  L 0.000  P 0.000  G 0.000 [0.4]
+perfect T, lookup L P G                                    s 0.6723  T 1.000  L 0.444  P 0.450  G 0.468 [0.747]
+lookup T, perfect L                                        s 0.4264  T 0.107  L 1.000  P 0.450  G 0.468 
+lookup T, perfect P                                        s 0.4252  T 0.107  L 0.444  P 1.000  G 0.468 
+lookup T, perfect G                                        s 0.4216  T 0.107  L 0.444  P 0.450  G 1.000 
+lookup T, perfect L P G                                    s 0.6428  T 0.107  L 1.000  P 1.000  G 1.000 
+lookup on seen, perfect on unseen spellings                s 0.8918  T 0.867  L 0.938  P 0.906  G 0.882 
+perfect on seen, lookup on unseen spellings                s 0.3814  T 0.135  L 0.506  P 0.544  G 0.586 
+lookup, perfect transliteration on unseen only             s 0.6190  T 0.867  L 0.444  P 0.450  G 0.468 
+lookup, perfect transliteration on seen only               s 0.3264  T 0.135  L 0.444  P 0.450  G 0.468 
+lookup, perfect L P G on unseen only                       s 0.5879  T 0.107  L 0.938  P 0.906  G 0.882 
+lookup, perfect L P G on seen only                         s 0.3701  T 0.107  L 0.506  P 0.544  G 0.586 
+   lookup word accuracy on seen spellings (6825 words): translit 0.891 lemma 0.873 upos 0.826 gloss 0.661
+   lookup word accuracy on unseen spellings (5824 words): translit 0.000 lemma 0.000 upos 0.074 gloss 0.001
+
+== readings: s of each reading on test-like inputs ==
+train words with a repeated gloss feature 0, with no gloss feature 0, sentences with an empty transliteration string 0, empty fields per layer [0, 0, 0, 0]
+   default                                  lookup 0.31513  constant 0.10403  perfect 1.00000  perfectT+empty 0.40000  messy lookup 0.20906
+   multiset gloss                           lookup 0.31513  constant 0.10403  perfect 1.00000  perfectT+empty 0.40000  messy lookup 0.20906
+   both gloss sets empty scores 0           lookup 0.31513  constant 0.10403  perfect 1.00000  perfectT+empty 0.40000  messy lookup 0.20906
+   empty true transliteration: exact only   lookup 0.31513  constant 0.10403  perfect 1.00000  perfectT+empty 0.40000  messy lookup 0.20906
+   malformed word dropped from the join     lookup 0.31513  constant 0.10403  perfect 1.00000  perfectT+empty 0.40000  messy lookup 0.20853
+   split on any whitespace                  lookup 0.31513  constant 0.10403  perfect 1.00000  perfectT+empty 0.40000  messy lookup 0.29953
+
+== sensitivity of T (truth corrupted, L P G kept perfect unless stated) ==
+   one substituted character per sentence               T 0.789  s lost 0.0846
+   one deleted character per sentence                   T 0.789  s lost 0.0846
+   every '.' ending mark dropped                        T 0.745  s lost 0.1018
+   brackets dropped, letters kept: (x) -> x             T 0.915  s lost 0.0340
+   bracketed letters dropped: (x) -> ''                 T 0.877  s lost 0.0492
+   '=' dropped                                          T 0.815  s lost 0.0741
+   '-' dropped                                          T 0.937  s lost 0.0250
+   combining marks dropped (i with breve below -> i)    T 0.934  s lost 0.0264
+   lower-cased                                          T 0.938  s lost 0.0248
+   last character of every word dropped                 T 0.290  s lost 0.2841
+   transliteration := true lemma                        T 0.514  s lost 0.1944
+   share of words whose transliteration equals the lemma 0.708
+
+== word count errors (truth, one word touched) ==
+   middle word missing, later words shift left             s 0.4646  T 0.445  L 0.457  P 0.480  G 0.496 
+   middle word left as an empty slot (;;;)                 s 0.7022  T 0.543  L 0.808  P 0.808  G 0.808 
+   middle word emitted twice, later words shift right      s 0.5139  T 0.445  L 0.542  P 0.562  G 0.575 
+   middle word twice, then cut to n_words                  s 0.5352  T 0.334  L 0.649  P 0.672  G 0.688 
+   last word missing                                       s 0.6468  T 0.405  L 0.808  P 0.808  G 0.808 
+   one extra copy of the last word                         s 0.6690  T 0.405  L 0.845  P 0.845  G 0.845 
+   (on the 1800 holdout sentences with 2 or more words)
+
+== unsure words: what to write as the transliteration of an unseen spelling ==
+   lookup default =k                                    T 0.107  s 0.3151
+   empty                                                T 0.106  s 0.3147
+   one wrong character                                  T 0.106  s 0.3145
+   3 wrong characters (train median word length)        T 0.093  s 0.3097
+   wrong characters, true length                        T 0.105  s 0.3141
+   first half of the true word                          T 0.307  s 0.3951
+   true word plus 2 wrong characters                    T 0.279  s 0.3839
+   true word                                            T 0.867  s 0.6190
+
+== by sentence length (holdout) ==
+   n_words 1       sentences 0.005  words 0.001  mean chars   5.9  lookup s 0.014 T 0.007 L 0.000 P 0.000 G 0.056  lookup T exact 0.000  T after one wrong char 0.364
+   n_words 2 to 3  sentences 0.148  words 0.056  mean chars  11.7  lookup s 0.237 T 0.087 L 0.331 P 0.318 G 0.360  lookup T exact 0.022  T after one wrong char 0.616
+   n_words 4 to 8  sentences 0.591  words 0.476  mean chars  22.7  lookup s 0.322 T 0.113 L 0.454 P 0.459 G 0.471  lookup T exact 0.010  T after one wrong char 0.787
+   n_words 9+      sentences 0.256  words 0.468  mean chars  53.7  lookup s 0.350 T 0.107 L 0.494 P 0.512 G 0.530  lookup T exact 0.000  T after one wrong char 0.900
+   lookup T distribution: exact 0.009, T<0.05 0.368, between 0.623
+   lookup mean CER 0.532: exp(-mean CER/0.2) 0.070 against mean T 0.107
+   test.csv sentences by n_words bucket: {'1': 0.013, '2 to 3': 0.147, '4 to 8': 0.528, '9+': 0.312}
+
+wrote D:\eris-windows-gpu-kit-golden-apple\eris-windows-gpu-kit-golden-apple\solutions\working\egyptian-interlinear-analysis\working\toy_submission.csv: 1519 rows, default =k;=k;PRON;-2sg.m
+sample_submission.csv equals the constant default once per word: confirmed

@@ -1,0 +1,69 @@
+== 5 ambiguity: majority share by spelling (token-weighted)
+  spellings seen >=1: tokens 51291 (1.000 of all) spellings 11404 | full 0.7958 tl 0.9202 lem 0.9368 upos 0.9353 gloss 0.8289
+  spellings seen >=2: tokens 43304 (0.844 of all) spellings 3417 | full 0.7581 tl 0.9055 lem 0.9252 upos 0.9233 gloss 0.7973
+  spellings seen >=5: tokens 37369 (0.729 of all) spellings 1078 | full 0.7543 tl 0.9059 lem 0.9216 upos 0.9186 gloss 0.7910
+  spellings seen >=20: tokens 30789 (0.600 of all) spellings 283 | full 0.7683 tl 0.9145 lem 0.9204 upos 0.9151 gloss 0.7983
+  spellings >=5, majority full analysis given prev+w: 0.9109 (in-sample, upper bound)
+  spellings >=5, majority full analysis given w+next: 0.9417 (in-sample, upper bound)
+  spellings >=5, majority full analysis given prev+w+next: 0.9810 (in-sample, upper bound)
+  spellings >=5 with >1 full analysis: 849 of 1078 | tokens in them 33052 of 37369
+    𓈖 n=2331 maj=0.43 distinct=32 {'n;n;ADP;PREP:stpr': 1005, 'n;n;ADP;PREP': 672, 'n(.ꞽ);n.ꞽ;ADJ;PREP-adjz:m.sg': 387, 'n;n.ꞽ;ADJ;PREP-adjz:m.sg': 186}
+    𓂋 n=684 maj=0.61 distinct=18 {'r;r;ADP;PREP': 416, 'r;r;ADP;PREP:stpr': 106, 'r;ꞽr;PART;PTCL:stpr': 93, 'rʾ;rʾ;NOUN;N.m:stpr': 27}
+    𓇋𓂋 n=385 maj=0.41 distinct=13 {'ꞽr;r;ADP;PREP': 156, 'ꞽr;r;ADP;PREP:stpr': 105, 'ꞽr;ꞽr;ADP;PREP': 73, 'ꞽr;ꞽr;PART;PTCL:stpr': 31}
+    𓇋𓅓 n=400 maj=0.48 distinct=11 {'ꞽm;m;ADP;PREP:stpr': 192, 'ꞽm;ꞽm;ADV;PREP\\advz': 133, 'ꞽm(.ꞽ);ꞽm.ꞽ;ADJ;PREP-adjz:m.sg:stpr': 28, 'ꞽm(.ꞽ);ꞽm.ꞽ;ADJ;PREP-adjz:m.sg': 27}
+    𓅓 n=1851 maj=0.89 distinct=22 {'m;m;ADP;PREP': 1649, 'm;m;VERB;V': 78, 'm;m;VERB;V\\imp.sg': 34, 'm;m;PART;PTCL': 27}
+    𓊨𓁹 n=327 maj=0.46 distinct=5 {'(w)sr(.w);Wsꞽr;NOUN;TITL': 149, '(w)sꞽr;Wsꞽr;NOUN;TITL': 64, '(w)sr(.w);Wsꞽr;PROPN;DIVN': 62, '(w)sꞽr;Wsꞽr;PROPN;DIVN': 40}
+    𓎟 n=266 maj=0.35 distinct=20 {'nb;nb;ADJ;ADJ:m.sg': 92, 'nb;nb;NOUN;N.m:stc': 46, 'nb(.t);nb;ADJ;ADJ:f.sg': 45, 'nb;nb;ADJ;ADJ:m.pl': 21}
+    𓋴 n=576 maj=0.80 distinct=10 {'=s;=s;PRON;-3sg.f': 462, 's(ꞽ);sꞽ;PRON;=3sg.f': 100, '=s(n);=sn;PRON;-3pl': 4, 's;s;NOUN;N.m': 2}
+    𓇋𓈖 n=223 maj=0.49 distinct=6 {'ꞽn;ꞽn;ADP;PREP': 110, 'ꞽn;ꞽn;PART;PTCL': 85, 'ꞽn;n;ADP;PREP': 14, 'ꞽ.n;ꞽ;VERB;V\\tam.act-ant': 8}
+    𓂋𓈖 n=259 maj=0.63 distinct=3 {'rn;rn;NOUN;N.m:stpr': 164, 'rn;rn;NOUN;N.m:stc': 54, 'rn;rn;NOUN;N.m': 41}
+    𓊪𓅱 n=239 maj=0.61 distinct=4 {'pw;pw;PRON;dem': 146, 'pw;pw;PRON;dem.m.sg': 91, '(ꞽ)pw;ꞽpw;PRON;dem.m.pl': 1, 'p(w);pw;PRON;dem': 1}
+    𓁹 n=123 maj=0.31 distinct=22 {'ꞽri̯;ꞽri̯;VERB;V\\tam.act:stpr': 38, 'ꞽri̯;ꞽri̯;VERB;V\\imp.sg': 28, 'ꞽri̯;ꞽri̯;VERB;V\\ptcp.act.m.sg': 13, 'ꞽri̯;ꞽri̯;VERB;V\\advz': 10}
+
+== 6 transliteration vs lemma
+  lemma == translit 0.6018 | caseless 0.6998
+  lemma == translit without ( ) 0.6622 | caseless 0.7840
+  lemma == translit without ( ) and cut at first '.' 0.6031 | caseless 0.6651
+  any of the three 0.7301 | caseless 0.8520 | one is a caseless prefix of the other 0.8916
+  by UPOS: any-of-three caseless {'ADJ': 0.67, 'ADP': 0.903, 'ADV': 0.911, 'INTJ': 0.909, 'NOUN': 0.824, 'NUM': 0.216, 'PART': 0.887, 'PRON': 0.984, 'PROPN': 0.846, 'VERB': 0.755}
+  lemma has uppercase: 0.1462 by UPOS {'ADJ': 0.0, 'ADP': 0.0, 'ADV': 0.0, 'INTJ': 0.0, 'NOUN': 0.059, 'NUM': 0.0, 'PART': 0.0, 'PRON': 0.0, 'PROPN': 0.997, 'VERB': 0.0}
+  translit has uppercase: 0.0325
+  translit has '(': 0.1182 has '.': 0.326 starts '=': 0.1542 has '-': 0.1486 has i̯: 0.0644
+  examples not matching: [['𓂓𓅓𓋹𓈖𓐍𓀙', 'kꜣ(.ꞽ)-m-ꜥnḫ', 'Kꜣ=ꞽ-m-ꜥnḫ', 'PROPN', 'PERSN'], ['𓌳𓁹𓄿', 'mꜣ', 'mꜣꜣ', 'VERB', 'V\\tam.act:stpr'], ['𓇋𓌳𓐍𓄪𓇋𓇋', 'ꞽmꜣḫ.y', 'ꞽmꜣḫ.w', 'NOUN', 'N.m'], ['𓉐𓉻𓋴𓌉𓏅𓏏𓈙', 'sḥḏ-ḫnt.w-š-pr-ꜥꜣ', 'sḥḏ-ḫnt.ꞽw-š-pr-ꜥꜣ', 'NOUN', 'TITL'], ['𓊨𓁹', '(w)sr(.w)', 'Wsꞽr', 'NOUN', 'TITL'], ['𓇋𓈙𓏏', 'ꞽš.t', 'ꞽḫ.t', 'NOUN', 'N.f:stpr'], ['𓊵𓏙', 'ḥtp-ḏi̯', 'm-ḫt', 'NOUN', '(undefined)'], ['𓍹𓏏𓏏𓇋𓍺𓊽𓊨𓊨𓊨𓉴𓊹𓍛', 'ḥm-nṯr-ḏd-s.tPL-ttꞽ', 'ḥm-nṯr-Ḏd-s.wt-Ttꞽ', 'NOUN', 'TITL'], ['𓇦𓂋', 'ḏr', 'ḏr.w', 'NOUN', 'N.m:stpr'], ['𓍛𓊚𓊚𓊚', 'ḥm-šnw.t.PL', 'ḥm-šnw.wt', 'NOUN', 'TITL'], ['𓉓𓏖', 'pr-ḫrw', 'pr.t-ḫrw', 'NOUN', 'N.f'], ['𓄿𓍒', 'wḏꜣ', 'wḏꜣ+(ꞽb)', 'VERB', 'V\\tam.act'], ['𓏻', '2', 'sn.w', 'NUM', 'NUM.card'], ['𓈖', 'n', 'n.ꞽ', 'ADJ', 'PREP-adjz:m.sg']]
+  majority upos given lem: 0.9455
+  majority gloss given lem: 0.7529
+  majority upos given tl: 0.9272
+  majority gloss given tl: 0.8054
+  majority upos given w: 0.9353
+  majority gloss given w: 0.8289
+  majority gloss given lemma+upos: 0.7937
+  majority gloss given translit+lemma: 0.8377
+  majority upos given translit+lemma: 0.9583
+  majority upos given gloss: 0.9843
+  majority lemma given translit: 0.9578
+  majority translit given lemma: 0.8148
+  gloss by UPOS: distinct {'ADJ': 34, 'ADP': 6, 'ADV': 3, 'INTJ': 1, 'NOUN': 39, 'NUM': 7, 'PART': 7, 'PRON': 55, 'PROPN': 13, 'VERB': 100}
+
+== 7 leakage checks
+id pattern ok train 1.0 test 1.0 id lengths {11: 8505}
+file sorted by id: train True test True
+spearman id value vs century train SignificanceResult(statistic=np.float64(-0.0014051874230862624), pvalue=np.float64(0.8969058535001295)) vs n_words SignificanceResult(statistic=np.float64(-0.012741450802829846), pvalue=np.float64(0.24002506342186136))
+spearman id value vs century test SignificanceResult(statistic=np.float64(0.03615100200227786), pvalue=np.float64(0.15905342934927538))
+id value range train 1.5683059245930053e-05 0.9999909917360128 test 0.0012928512969665462 0.9998423729166461 KS train vs test id KstestResult(statistic=np.float64(0.03866145422725048), pvalue=np.float64(0.041197590317146884), statistic_location=np.float64(363127774415.0), statistic_sign=np.int8(1))
+id first hex digit train [('3', 566), ('4', 563), ('c', 560), ('5', 555), ('9', 554), ('1', 551), ('8', 536), ('7', 524), ('a', 524), ('e', 520), ('6', 515), ('b', 515), ('d', 511), ('2', 506), ('f', 504), ('0', 501)]
+id last hex digit train [('e', 582), ('8', 566), ('d', 563), ('c', 552), ('2', 551), ('1', 547), ('b', 529), ('9', 522), ('f', 521), ('0', 519), ('6', 519), ('4', 518), ('3', 513), ('a', 509), ('5', 507), ('7', 487)]
+late slice share by first hex digit {'0': 0.212, '1': 0.205, '2': 0.19, '3': 0.201, '4': 0.242, '5': 0.222, '6': 0.204, '7': 0.225, '8': 0.19, '9': 0.209, 'a': 0.208, 'b': 0.19, 'c': 0.207, 'd': 0.241, 'e': 0.229, 'f': 0.228}
+adjacent rows same century 0.1783 expected if shuffled 0.1878
+adjacent rows both late 0.0444 expected 0.0452
+word Jaccard adjacent rows 0.015 random pairs 0.0148
+test: word Jaccard adjacent rows 0.0336 random pairs 0.0326 adjacent same century 0.4704 expected 0.4708
+ids of the most repeated string ['S1ae113e010', 'S23a7676e5a', 'S4511850a02', 'Se0759f91b1']
+test n_words by century {16: {'count': 661, 'mean': 9.54, 'median': 8.0}, 17: {'count': 804, 'mean': 6.74, 'median': 5.0}, 18: {'count': 54, 'mean': 7.87, 'median': 6.0}}
+
+== folds
+  fold 0 (<=19th) train on >=20th: held rows 1809 words 12649 mean len 6.99 | train rows 6696 | unseen spelling 0.4604 unseen lemma 0.1464 | lookup word acc tl/lem/upos/gloss all [0.479, 0.471, 0.446, 0.356] seen-only [0.889, 0.872, 0.827, 0.66]
+  fold 1 (20-22nd) train on >=23rd only: held rows 2500 words 15862 mean len 6.34 | train rows 4196 | unseen spelling 0.2616 unseen lemma 0.1033 | lookup word acc tl/lem/upos/gloss all [0.616, 0.666, 0.673, 0.566] seen-only [0.835, 0.902, 0.911, 0.766]
+  fold 1 (20-22nd) train on all other: held rows 2500 words 15862 mean len 6.34 | train rows 6005 | unseen spelling 0.2430 unseen lemma 0.0929 | lookup word acc tl/lem/upos/gloss all [0.629, 0.68, 0.688, 0.577] seen-only [0.831, 0.898, 0.908, 0.762]
+  fold 2 (23rd) train on >=24th only: held rows 660 words 5985 mean len 9.07 | train rows 3536 | unseen spelling 0.2120 unseen lemma 0.0867 | lookup word acc tl/lem/upos/gloss all [0.699, 0.713, 0.705, 0.581] seen-only [0.887, 0.905, 0.894, 0.738]
+  fold 2 (23rd) train on all other: held rows 660 words 5985 mean len 9.07 | train rows 7845 | unseen spelling 0.1515 unseen lemma 0.0478 | lookup word acc tl/lem/upos/gloss all [0.762, 0.776, 0.769, 0.64] seen-only [0.898, 0.914, 0.906, 0.754]
+fold sizes Counter({-1: 3536, 1: 2500, 0: 1809, 2: 660})

@@ -1,0 +1,117 @@
+shapes (8505, 5) (1519, 4) (1519, 2)
+cols ['id', 'latest_century', 'n_words', 'hieroglyphs', 'prediction'] ['id', 'latest_century', 'n_words', 'hieroglyphs'] ['id', 'prediction']
+{'id': <StringDtype(na_value=nan)>, 'latest_century': <StringDtype(na_value=nan)>, 'n_words': dtype('int64'), 'hieroglyphs': <StringDtype(na_value=nan)>, 'prediction': <StringDtype(na_value=nan)>}
+id unique True True overlap 0
+ss ids == test ids in order True
+sample ss =k;=k;PRON;-2sg.m =k;=k;PRON;-2sg.m =k;=k;PRON;-2sg.m =k;=k;PRON;-2sg.m =k;=k;PR
+
+HEAD
+S0001071e3a | 22nd century BCE | 7 | 𓅓𓂋𓉐𓏤 𓋴𓌉𓂖 𓇋𓌳𓄪𓐍𓅱𓐍𓂋𓎟𓆑𓇳𓎟 𓁹𓂋𓎛𓎿𓊃𓊃𓏏 𓌸𓂋𓂋𓎟 𓁹𓂋𓎗𓏏𓅱 𓈎𓄿𓂋𓎤 | (ꞽ)m(.ꞽ)-rʾ-pr;ꞽm.ꞽ-rʾ-pr;NOUN;TITL sḥḏ-ḥm(.w)-kꜣ;sḥḏ-ḥm.w-kꜣ;NOUN;TITL ꞽmꜣḫ.w-ḫr-nb=f-rꜥw-nb;ꞽmꜣḫ.w-ḫr-nb=f-rꜥw-nb;NOUN;TITL ꞽrr-ḥzz.t;ꞽrr-ḥzz.t;NOUN;TITL mrr(.w)-nb(=f);mrr.w-nb=f;NOUN;TITL ꞽrr-wḏ.t(-nb=f);ꞽrr-wḏ.t-nb=f-rꜥw-nb;NOUN;TITL qꜣr;Qꜣr;PROPN;PERSN
+S000b4916b1 | 18th century BCE | 10 | 𓊢𓂝𓈖 𓏎𓈖𓎢𓅱𓀀 𓂋 𓈀𓈇𓏤 𓊪𓈖 𓇋𓈖 𓍯𓄿𓅱𓈗 𓏤 𓈖 𓇆𓅨𓂋𓈘 | ꜥḥꜥ.n;ꜥḥꜥ.n;PART;PTCL ꞽni̯.kwꞽ;ꞽni̯;VERB;V\res-1sg r;r;ADP;PREP ꞽw;ꞽw;NOUN;N.m pn;pn;PRON;dem.m.sg ꞽn;ꞽn;ADP;PREP wꜣw;wꜣ.w;NOUN;N wꜥ;wꜥ;ADJ;ADJ n(.ꞽ);n.ꞽ;ADJ;PREP-adjz:m.sg wꜣḏ-wr;wꜣḏ-wr;NOUN;N.m
+S000c556502 | 32nd century BCE | 2 | 𓅃 𓉘𓆢𓊂𓍋 | ḥr.w;Ḥr.w;NOUN;ROYLN nꜥr-mr;Nꜥr-mr;PROPN;ROYLN
+S0019901da8 | 18th century BCE | 6 | 𓇋𓍱𓋴𓏏𓀁 𓊪𓏲 𓈖𓏏𓏭 𓇋𓅓 𓎢𓄿𓀁 𓏏𓏲 | ꞽšs.t;ꞽšst;PRON;Q pw;pw;PRON;dem n.tꞽ;n.tꞽ;PRON;PRON.rel:m.sg ꞽm;ꞽm;ADV;PREP\advz kꜣ;kꜣ;VERB;V\tam.act:stpr =tw;=tw;PRON;-3sg.c
+S002673c5b0 | 22nd century BCE | 1 | 𓍿𓈖𓏏𓏏𓍘 | ṯnt.tꞽ;Ṯnt.tꞽ;PROPN;PERSN
+S002fc2227f | 22nd century BCE | 2 | 𓂧𓅱 𓋴𓇋𓐎 | dw;wdi̯;VERB;V\inf sꞽn;sꞽn;NOUN;N.m
+test head
+S0054ba720a | 16th century BCE | 20 | 𓂋𓐍𓏛 𓎢 𓊪𓆑𓋴𓋴𓊮 𓋴𓈖𓏥 𓁷𓏤 𓂝𓐍𓐍𓊮 𓈗 𓇋𓂋𓏭 𓁷𓏤 𓆄𓏲𓏲𓇳 𓋴𓈖𓏥 𓂋 𓃹𓈖𓈖 𓏇𓇋 𓋴𓐍𓂋𓏛𓏥 𓆄𓏲𓇳 𓂜𓈖 𓈖𓈎𓅱𓏏𓈗 𓂋 𓋴
+S006f2793a1 | 17th century BCE | 6 | 𓏶𓅓 𓈖𓎢 𓅾𓀁 𓅭 𓀀 𓅃𓅆
+S00ad697b09 | 17th century BCE | 4 | 𓇓𓏏𓏙𓊵 𓊨𓁹 𓎟𓋹 𓋾𓆓𓏏𓇿
+S00c562a491 | 16th century BCE | 4 | 𓊢𓂝𓈖 𓎁𓏏𓈖𓂡 𓋴𓏭 𓅓𓋴𓎛𓆊
+
+== 1 century
+latest_century
+22nd century BCE    2366
+24th century BCE    2192
+18th century BCE    1490
+23rd century BCE     660
+25th century BCE     445
+27th century BCE     391
+19th century BCE     310
+28th century BCE     205
+20th century BCE     115
+30th century BCE     113
+31st century BCE      97
+29th century BCE      37
+26th century BCE      26
+32nd century BCE      25
+21st century BCE      19
+16th century BCE       9
+33rd century BCE       5
+latest_century
+17th century BCE    804
+16th century BCE    661
+18th century BCE     54
+train words per century
+                  count    sum      mean
+latest_century                          
+16th century BCE      9     86  9.555556
+18th century BCE   1490  10279  6.898658
+19th century BCE    310   2284  7.367742
+20th century BCE    115    803  6.982609
+21st century BCE     19    117  6.157895
+22nd century BCE   2366  14942  6.315300
+23rd century BCE    660   5985  9.068182
+24th century BCE   2192  13585  6.197536
+25th century BCE    445   1664  3.739326
+26th century BCE     26     92  3.538462
+27th century BCE    391    701  1.792839
+28th century BCE    205    361  1.760976
+29th century BCE     37     69  1.864865
+30th century BCE    113    157  1.389381
+31st century BCE     97    119  1.226804
+32nd century BCE     25     40  1.600000
+33rd century BCE      5      7  1.400000
+                  count   sum      mean
+latest_century                         
+16th century BCE    661  6306  9.540091
+17th century BCE    804  5415  6.735075
+18th century BCE     54   425  7.870370
+
+== 1 lengths
+train n_words: mean 6.0 p50 5 p90 12 p95 15 p99 24 max 53 min 1 sum 51291
+test n_words: mean 8.0 p50 6 p90 16 p95 19 p99 31 max 45 min 1 sum 12146
+train hiero chars: mean 23.6 p50 18 p90 48 p95 62 p99 106 max 297 min 1 sum 200842
+test hiero chars: mean 30.0 p50 24 p90 59 p95 72 p99 108 max 194 min 1 sum 45641
+train hiero bytes: mean 70.8 p50 57 p90 139 p95 182 p99 296 max 798 min 4 sum 602566
+test hiero bytes: mean 93.7 p50 73 p90 181 p95 225 p99 325 max 584 min 4 sum 142385
+train target chars: mean 135.3 p50 110 p90 265 p95 339 p99 541 max 1111 min 14 sum 1150344
+train target bytes: mean 159.2 p50 128 p90 308 p95 396 p99 619 max 1344 min 14 sum 1353574
+train translit-only chars: mean 31.4 p50 24 p90 61 p95 81 p99 132 max 341 min 1 sum 266674
+train translit-only bytes: mean 43.3 p50 33 p90 84 p95 111 p99 182 max 479 min 2 sum 367947
+cap 256: train input bytes over 0.0172 target bytes over 0.1620 test input over 0.0263
+cap 384: train input bytes over 0.0026 target bytes over 0.0549 test input over 0.0046
+cap 512: train input bytes over 0.0006 target bytes over 0.0213 test input over 0.0007
+cap 768: train input bytes over 0.0001 target bytes over 0.0039 test input over 0.0000
+cap 1024: train input bytes over 0.0000 target bytes over 0.0011 test input over 0.0000
+target bytes per word mean 26.390087929656275 input bytes per word 11.74798697627264
+target chars per word 22.427794349885946
+group chars: mean 21.6 p50 19 p90 31 p95 35 p99 48 max 117 min 10 sum 1107558
+group bytes: mean 25.6 p50 23 p90 38 p95 45 p99 69 max 161 min 10 sum 1310788
+train word bytes: mean 10.9 p50 8 p90 20 p95 24 p99 37 max 110 min 4 sum 559780
+test word bytes: mean 10.8 p50 8 p90 20 p95 24 p99 32 max 58 min 4 sum 131758
+n_words hist train [0, 1086, 1159, 794, 873, 893, 802, 525, 462, 340, 299, 268, 218, 152, 130, 89, 78, 67, 47, 29, 32, 26, 24, 14, 14, 17, 20, 9, 11, 6, 1, 1, 2, 1, 2, 3, 1, 0, 3, 0, 0, 1, 3, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1]
+n_words hist test [0, 19, 68, 156, 197, 189, 167, 145, 104, 79, 46, 47, 54, 38, 27, 30, 24, 20, 20, 14, 10, 12, 11, 5, 4, 5, 5, 2, 2, 2, 0, 3, 2, 0, 4, 1, 1, 2, 0, 2, 0, 0, 0, 0, 1, 1]
+NFC stable: hiero 1.0 pred 1.0 test 1.0
+
+== 2 format
+train n_words == split(' ') 1.0 bad 0
+train double space 0 lead/trail 0 empty 0 other whitespace 0
+test n_words == split(' ') 1.0 bad 0
+test double space 0 lead/trail 0 empty 0 other whitespace 0
+groups == n_words 1.0 bad 0
+total groups 51291 not 4 fields 0 empty fields by pos {}
+pred double space 0 pred strip 0
+train rows with <g> 1452 0.1707 words with <g> 1956 0.0381 code tokens 2198 distinct 526
+  top [('D77', 91), ('D207', 89), ('P1C', 48), ('P30', 46), ('(unidentified)', 45), ('W54', 42), ('G29A', 40), ('D82', 39), ('X3A', 37), ('D286', 35), ('Q33', 33), ('D210', 32)]
+  code length max 14 space inside code 0
+test rows with <g> 194 0.1277 words with <g> 243 0.0200 code tokens 250 distinct 105
+  top [('R118', 21), ('W17D', 18), ('H38', 15), ('V28C', 14), ('U116', 10), ('U23B', 6), ('A17D', 5), ('A40E', 4), ('A7A', 4), ('M3E', 4), ('S8A', 4), ('(unidentified)', 4)]
+  code length max 14 space inside code 0
+  test codes unseen in train: distinct 60 tokens 134 of 250
+train non-hieroglyph chars outside <g>: [('︂', '0xfe02', 65), ('︀', '0xfe00', 8), ('⟦', '0x27e6', 1), ('⟧', '0x27e7', 1), ('V', '0x56', 1), ('3', '0x33', 1), ('1', '0x31', 1), ('A', '0x41', 1), ('a', '0x61', 1)]
+train examples with <g>: ['<g>V16A</g>𓄿<g>(unidentified)</g>𓅱 𓍿𓅱 𓂝𓂋𓈞𓏤 𓂋 𓅜𓅜𓅜', '𓈖𓆷<g>M228</g>𓄿𓏏𓅱𓊖', '𓂞𓏏 𓈖 𓆑 𓂣𓂣 𓅓 𓈖𓈙𓅓𓏏<g>P27A</g> 𓁷 𓍯𓄿𓏏𓈐𓏪 𓋀𓏏𓈉']
+test non-hieroglyph chars outside <g>: [('︂', '0xfe02', 86), ('︀', '0xfe00', 5), ('⟦', '0x27e6', 1), ('⟧', '0x27e7', 1)]
+test examples with <g>: ['𓈝𓅓𓂻 𓆑 𓋴𓇋<g>A361</g> 𓅓 𓏏𓃀𓅱𓏏𓋸 𓆑 𓅓 𓐞𓏤 𓆑 𓌨𓂋𓏭 𓋴𓈎𓂋𓀜 𓊪𓆑 𓈖𓏏𓏭 𓅓 𓆓𓈖𓈖𓏏𓁶 𓆑', '𓇋𓂋 𓈝𓅓𓂻 𓆑 𓋴𓇋<g>A361</g> 𓆑 𓅓 𓏏𓃀𓅱𓏏𓋸 𓆑 𓆓𓂧 𓆑 𓂋 𓈝𓅓𓂻 𓆑 𓏏𓃀𓏏𓋸 𓆑 𓇑𓇑𓈖𓈖𓏏𓀉', '𓇼𓀢 𓋉<g>R92A</g>𓀭 𓇋𓋔 𓂋𓊪𓂝 𓄂𓂝 𓋔𓏏𓋩 𓄓𓐞𓉐 𓐍𓈖𓇓𓅱𓀼 𓄙𓋹 𓆓𓂧 𓆑']
+target distinct chars 94
+target chars  !()+-./012345679:;=ABCDEFGHIJKLMNOPQRSTUVWXYZ\abcdefghijklmnopqrstuvwxyz~Ššʾ̯̱ḎḏḤḥḪḫṮṯẖꜢꜣꜤꜥꞼꞽ
+target rare chars [('K', '0x4b', 214), ('Ḫ', '0x1e2a', 214), ('~', '0x7e', 204), ('Ḏ', '0x1e0e', 188), ('Š', '0x160', 186), ('Ꜣ', '0xa722', 157), ('G', '0x47', 124), ('Z', '0x5a', 115), ('H', '0x48', 110), ('o', '0x6f', 104), ('X', '0x58', 100), ('Ꜥ', '0xa724', 77), ('̱', '0x331', 73), ('Ṯ', '0x1e6e', 71), ('Q', '0x51', 68), ('x', '0x78', 28), ('!', '0x21', 24), ('6', '0x36', 10), ('F', '0x46', 8), ('0', '0x30', 7), ('9', '0x39', 4), ('4', '0x34', 4), ('5', '0x35', 2), ('/', '0x2f', 2), ('7', '0x37', 1)]

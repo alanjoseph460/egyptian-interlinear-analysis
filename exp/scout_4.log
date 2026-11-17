@@ -1,0 +1,10 @@
+fold sizes {-1: 4196, 0: 1499, 1: 310, 2: 2500}
+words per fold {-1: 22780, 0: 10365, 1: 2284, 2: 15862}
+page train rows 6696 held rows 1809 held words 12649 unseen spelling 0.4604
+near train rows 7006 held rows 1499 held words 10365 unseen spelling 0.3834
+f1 train rows 8195 held rows 310 held words 2284 unseen spelling 0.352
+f2 train rows 6005 held rows 2500 held words 15862 unseen spelling 0.243
+train rows with target bytes >512 181 >768 33 >1024 9
+target bytes per word incl. separator 26.56
+bytes per word by sentence: p50 25.2 p95 50.0
+train rows >=20 words 194 their target bytes p50/p95/max 590.0 978.7 1344

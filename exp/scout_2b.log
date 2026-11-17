@@ -1,0 +1,48 @@
+candidate slices, continued (published test: spelling 0.335, lemma 0.097)
+  <=19th held, >=20th train (page validation): held rows 1809 words 12649 (mean 6.99) | train rows 6696 words 38642 | unseen spelling 0.4604 unseen lemma 0.1464 | held rows with string in train part 0.0000
+  18th+16th held, all other train: held rows 1499 words 10365 (mean 6.91) | train rows 7006 words 40926 | unseen spelling 0.3834 unseen lemma 0.1260 | held rows with string in train part 0.0000
+  22nd held, earlier-only: held rows 2366 words 14942 (mean 6.32) | train rows 4196 words 22780 | unseen spelling 0.2476 unseen lemma 0.1011 | held rows with string in train part 0.0101
+  22nd held, all other: held rows 2366 words 14942 (mean 6.32) | train rows 6139 words 36349 | unseen spelling 0.2367 unseen lemma 0.0923 | held rows with string in train part 0.0101
+  23rd held, earlier-only: held rows 660 words 5985 (mean 9.07) | train rows 3536 words 16795 | unseen spelling 0.2120 unseen lemma 0.0867 | held rows with string in train part 0.0015
+  23rd held, all other: held rows 660 words 5985 (mean 9.07) | train rows 7845 words 45306 | unseen spelling 0.1515 unseen lemma 0.0478 | held rows with string in train part 0.0030
+  24th held, earlier-only: held rows 2192 words 13585 (mean 6.20) | train rows 1344 words 3210 | unseen spelling 0.6364 unseen lemma 0.5257 | held rows with string in train part 0.0018
+  24th held, all other: held rows 2192 words 13585 (mean 6.20) | train rows 6313 words 37706 | unseen spelling 0.2768 unseen lemma 0.1075 | held rows with string in train part 0.0114
+  23-24th held, all other: held rows 2852 words 19570 (mean 6.86) | train rows 5653 words 31721 | unseen spelling 0.2621 unseen lemma 0.0939 | held rows with string in train part 0.0088
+  >=25th held, all later train: held rows 1344 words 3210 (mean 2.39) | train rows 7161 words 48081 | unseen spelling 0.5417 unseen lemma 0.3523 | held rows with string in train part 0.0052
+  random 20% rows: held rows 1745 words 10948 (mean 6.27) | train rows 6760 words 40343 | unseen spelling 0.1754 unseen lemma 0.0460 | held rows with string in train part 0.0206
+  random half of <=19th held, rest incl. other half train (seed 0): held rows 910 words 6471 (mean 7.11) | train rows 7595 words 44820 | unseen spelling 0.2333 unseen lemma 0.0623 | held rows with string in train part 0.0022
+  random half of 18th+16th held, rest incl. other half train (seed 0): held rows 737 words 5146 (mean 6.98) | train rows 7768 words 46145 | unseen spelling 0.1980 unseen lemma 0.0556 | held rows with string in train part 0.0041
+  random half of <=19th held, rest incl. other half train (seed 1): held rows 915 words 6481 (mean 7.08) | train rows 7590 words 44810 | unseen spelling 0.2176 unseen lemma 0.0576 | held rows with string in train part 0.0055
+  random half of 18th+16th held, rest incl. other half train (seed 1): held rows 754 words 5198 (mean 6.89) | train rows 7751 words 46093 | unseen spelling 0.2093 unseen lemma 0.0621 | held rows with string in train part 0.0013
+  random half of <=19th held, rest incl. other half train (seed 2): held rows 933 words 6557 (mean 7.03) | train rows 7572 words 44734 | unseen spelling 0.2486 unseen lemma 0.0677 | held rows with string in train part 0.0054
+  random half of 18th+16th held, rest incl. other half train (seed 2): held rows 743 words 5034 (mean 6.78) | train rows 7762 words 46257 | unseen spelling 0.2197 unseen lemma 0.0600 | held rows with string in train part 0.0027
+
+per-century unseen spelling vs all other centuries / vs strictly earlier
+  16: words 86 vs-other 0.267 vs-earlier 0.267
+  18: words 10279 vs-other 0.384 vs-earlier 0.384
+  19: words 2284 vs-other 0.352 vs-earlier 0.430
+  20: words 803 vs-other 0.296 vs-earlier 0.418
+  21: words 117 vs-other 0.316 vs-earlier 0.444
+  22: words 14942 vs-other 0.237 vs-earlier 0.248
+  23: words 5985 vs-other 0.152 vs-earlier 0.212
+  24: words 13585 vs-other 0.277 vs-earlier 0.636
+  25: words 1664 vs-other 0.365 vs-earlier 0.703
+  26: words 92 vs-other 0.380 vs-earlier 0.859
+  27: words 701 vs-other 0.653 vs-earlier 0.886
+  28: words 361 vs-other 0.573 vs-earlier 0.784
+  29: words 69 vs-other 0.580 vs-earlier 0.826
+  30: words 157 vs-other 0.650 vs-earlier 0.879
+  31: words 119 vs-other 0.739 vs-earlier 0.891
+  32: words 40 vs-other 0.475 vs-earlier 0.775
+  33: words 7 vs-other 0.286 vs-earlier 1.000
+
+test words unseen in: all train 0.3352 | train >=20th only 0.4943 | train <=19th only 0.3622 | 18th only 0.3904 | 19th only 0.4915
+test words seen ONLY thanks to the <=19th train rows 0.1591
+<=19th UPOS share {'NOUN': np.float64(0.266), 'PRON': np.float64(0.226), 'VERB': np.float64(0.221), 'ADP': np.float64(0.141), 'PART': np.float64(0.061), 'ADJ': np.float64(0.046), 'PROPN': np.float64(0.028), 'ADV': np.float64(0.008), 'NUM': np.float64(0.001), 'INTJ': np.float64(0.001)}
+<=19th top gloss {'PREP': np.float64(0.111), 'N.m': np.float64(0.11), '-3sg.m': np.float64(0.07), '-2sg.m': np.float64(0.051), 'N.f': np.float64(0.044), 'PTCL': np.float64(0.043), 'V\\tam.act:stpr': np.float64(0.039), 'N.m:stpr': np.float64(0.034), '-1sg': np.float64(0.033), 'PREP:stpr': np.float64(0.03), 'V\\inf': np.float64(0.025), 'V\\ptcp.act.m.sg': np.float64(0.024)}
+>=20th UPOS share {'NOUN': np.float64(0.325), 'PRON': np.float64(0.183), 'PROPN': np.float64(0.161), 'VERB': np.float64(0.149), 'ADP': np.float64(0.11), 'ADJ': np.float64(0.038), 'PART': np.float64(0.021), 'ADV': np.float64(0.009), 'INTJ': np.float64(0.004), 'NUM': np.float64(0.001)}
+>=20th top gloss {'N.m': np.float64(0.085), 'TITL': np.float64(0.075), 'PREP': np.float64(0.072), '-2sg.m': np.float64(0.067), 'PERSN': np.float64(0.058), 'DIVN': np.float64(0.057), '-3sg.m': np.float64(0.055), 'ROYLN': np.float64(0.041), 'N.f': np.float64(0.041), 'PREP:stpr': np.float64(0.038), 'N.m:stpr': np.float64(0.032), 'V\\tam.act:stpr': np.float64(0.029)}
+glosses in <=19th not in >=20th: distinct 23 tokens share 0.0093
+1-word sentences share: train 0.1277 train <=19th 0.005 test 0.0125
+<=19th n_words mean 6.99 p50 6.0 p90 12.0 p99 23.0 max 34
+>=20th n_words mean 5.77 p50 4.0 p90 12.0 p99 25.0 max 53

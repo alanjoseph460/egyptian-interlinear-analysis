@@ -1,0 +1,23 @@
+time	name	score	note
+2026-10-07T04:18:29	e01_small_ep3	0.4942	page holdout after 3 of 12 epochs, per-word byt5-small
+2026-10-07T04:31:57	e01_small	0.5714	page holdout, per-word byt5-small 12 ep greedy; T .380 L .645 P .756 G .696; reference reads 0.545 here
+2026-10-07T04:49:19	e02_base	0.5753	page; byt5-base 10 ep lr 3e-4 strip greedy; beam4 0.5748; 21.7 min on 3090 Ti
+2026-10-07T04:49:20	e02_small_b40	0.5591	page; small 12 ep strip+dch 233 steps/ep; beam4 0.5560
+2026-10-07T05:07:28	e02_s_nostrip	0.5721	page; small 12 ep full UTF-8 bytes; strip seeds 0.5591 and 0.5537, so lead bytes +0.015
+2026-10-07T05:11:03	e02_s_ep24	0.5728	page; small strip 24 ep (beam4 number; greedy in log)
+2026-10-07T05:27:39	e03_small_base_ens	0.5711	page; small strip 0.5538 + base strip 0.5637 (same recipe read 0.5753 on another host) = ensemble 0.5711; no gain over v1 recipe 0.5714/0.5721
+2026-10-07T05:33:30	e02_s_lr1e3	0.5774	page; small full bytes 12 ep lr 1e-3 (5e-4 reads 0.5721)
+2026-10-07T05:50:06	e02_s_b20	0.571	page; small full bytes 12 ep, 611 updates per epoch: no gain over 290 (0.5721)
+2026-10-07T06:14:06	e02_s_lr1e3_ep20	0.5807	page; small full bytes lr 1e-3 20 ep; T .390 L .654 P .767 G .701; v1 recipe reads 0.571 to 0.572
+2026-10-07T06:51:18	e02_lemfirst	0.5809	page; lemma written before transliteration, 12 ep lr 1e-3 (0.5774 without): +0.0035, inside seed noise
+2026-10-07T06:51:19	e02_ctx1	0.5699	page; decoder sees neighbour words, 12 ep lr 1e-3: no gain
+2026-10-07T08:03:02	e04_lf_s42	0.5783	page 20 ep lr 1e-3 lemma first
+2026-10-07T08:03:03	e04_lf_s7	0.5856	page 20 ep lr 1e-3 lemma first seed 7
+2026-10-07T08:03:04	e04_tl_s7	0.5813	page; v1 recipe seed 7 (seed 42 reads 0.5807): lemma first mean 0.582, no gain
+2026-10-07T08:07:13	e04_lr2e3	0.5952	page 20 ep lr 2e-3 (1e-3 reads 0.581): T .400 L .673 P .784 G .719
+2026-10-07T08:09:28	e04_ls10	0.5972	page 20 ep lr 1e-3 label smoothing 0.1 (0.581 without): T .403 L .674 P .787 G .719
+2026-10-07T08:09:31	e04_drop20	0.5662	page; dropout 0.2 at epoch 15 of 20, killed: behind
+2026-10-07T08:32:17	e05_ls10_s7	0.5935	page 20 ep lr 1e-3 LS 0.1 seed 7 (seed 42: 0.5972)
+2026-10-07T08:32:18	e05_ls20	0.5855	page LS 0.2: below LS 0.1
+2026-10-07T08:32:19	e05_ens2_ls10	0.5891	page two 12-ep LS members 0.5758 and 0.5778, ensemble 0.5891: below one 20-ep LS model
+2026-10-07T08:36:32	e06_lr2e3_ls10	0.5955	page 20 ep lr 2e-3 + LS 0.1: equal to either alone (0.5952, 0.5972/0.5935), gains do not stack
